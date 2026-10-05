@@ -1,4 +1,4 @@
-# Java Loops II
+# Java End-of-file
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -29,30 +29,26 @@ For each line, print the line number, followed by a single space, and then the l
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T14:29:51.700Z  
+**Submitted:** 2026-10-05T17:46:26.420Z  
 
 ```java
-import java.util.*;
 import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-class Solution{
-    public static void main(String []argh){
-        Scanner sc = new Scanner(System.in);
-        int q=sc.nextInt();
-         for(int k=0;k<q;k++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int n = sc.nextInt();
+public class Solution {
 
-            int sum = a;
-
-            for (int i = 0; i < n; i++) {
-                sum += (1 << i) * b;
-                System.out.print(sum + " ");
-            }
-            System.out.println();
-        }
-        sc.close();
+    public static void main(String[] args) {
+         Scanner sc=new Scanner(System.in);
+         int LineNumber=1;
+         while(sc.hasNext()){
+            
+         String str=sc.nextLine();
+         System.out.println(LineNumber + " " +str);
+         LineNumber++;
+         }
     }
 }
 
