@@ -1,4 +1,4 @@
-# Java Stdin and Stdout I
+# Java Loops II
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -30,22 +30,30 @@ For each query, print the corresponding series on a new line. Each series must b
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-01T15:19:06.162Z  
+**Submitted:** 2026-10-05T14:29:39.610Z  
 
 ```java
 import java.util.*;
+import java.io.*;
 
-public class Solution {
+class Solution{
+    public static void main(String []argh){
+        Scanner sc = new Scanner(System.in);
+        int q=sc.nextInt();
+         for(int k=0;k<q;k++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int n = sc.nextInt();
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int b =scan.nextInt();
-        int c= scan.nextInt();
-        System.out.println(a);
-        System.out.println(b);
-        System.out.print(c);
-         
+            int sum = a;
+
+            for (int i = 0; i < n; i++) {
+                sum += (1 << i) * b;
+                System.out.print(sum + " ");
+            }
+            System.out.println();
+        }
+        sc.close();
     }
 }
 
